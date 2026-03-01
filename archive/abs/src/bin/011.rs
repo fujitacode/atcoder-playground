@@ -3,12 +3,9 @@ use proconio::input;
 fn main() {
     input! {
         n: usize,
-        mut d: [i64; n]
     }
 
-    d.sort_by(|x, y| y.cmp(x));
-    d.dedup();
-    let ans = d.len();
+    let ans = n
 
     println!("{}", ans);
 }
