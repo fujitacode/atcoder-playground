@@ -3,25 +3,23 @@ use proconio::input;
 fn main() {
     input! {
         n: usize,
-        a: i64,
-        b: i64
+        mut x: [i64; n]
     }
 
-    let mut total = 0;
+    x.sort_by(|x, y| y.cmp(x));
 
-    for i in 1..=n {
-        let mut x = i;
-        let mut sum = 0;
+    let mut a = 0;
+    let mut b = 0;
 
-        while x > 0 {
-            sum += x % 10;
-            x /= 10;
-        }
-
-        if a <= sum && sum <= b {
-            total += i;
+    for (i ,v) in x.into_iter().enumerate() {
+        if i % 2 == 0 {
+            a += v;
+        } else {
+            b += v;
         }
     }
 
-    println!("{}", total);
+    let ans = a - b;
+
+    println!("{}", ans);
 }
