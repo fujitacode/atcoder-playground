@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        "**/target": true,
+        "**/Cargo.lock": true,
+        "**/node_modules": true,
+        "**/.git": true,
+        "**/rs/src": true,
+        "**/rs/Cargo.toml": true
+    }
+}

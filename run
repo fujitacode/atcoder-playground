@@ -44,6 +44,6 @@ else
     echo "エラー: 対応していない言語です。rs, java, js のいずれかを指定してください。"
 fi
 
-# ./run.sh rs abs/001
-# ./run.sh java abs/001
-# ./run.sh js abs/001
+# ./run js abs/001
+# ./run java abs/001
+# ./run rs abs/001
