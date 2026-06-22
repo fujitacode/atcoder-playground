@@ -15,10 +15,11 @@ services:
     working_dir: /workspace
     tty: true
 
-  js:
-    image: node:18.16.1-alpine
-    container_name: atcoder-js
+  ts:
+    image: node:22-alpine
+    container_name: atcoder-ts
     volumes:
-      - ./js:/workspace
+      - ./ts:/workspace
     working_dir: /workspace
     tty: true
+    command: sh -c "npm install -g typescript@5.9 ts-node && tail -f /dev/null"

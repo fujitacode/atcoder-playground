@@ -1,1 +1,0 @@
-console.log("Hello, AtCoder from JS!");
