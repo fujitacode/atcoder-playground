@@ -5,6 +5,9 @@
         "**/node_modules": true,
         "**/.git": true,
         "**/rs/src": true,
-        "**/rs/Cargo.toml": true
+        "**/rs/Cargo.toml": true,
+        "**/ts/package-lock.json": true,
+        "**/ts/package.json": true,
+        "**/ts/tsconfig.json": true,
     }
 }
