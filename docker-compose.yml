@@ -1,0 +1,24 @@
+services:
+  rs:
+    image: rust:1.70.0
+    container_name: atcoder-rs
+    volumes:
+      - ./rs:/workspace
+    working_dir: /workspace
+    tty: true
+
+  java:
+    image: eclipse-temurin:17-jdk
+    container_name: atcoder-java
+    volumes:
+      - ./java:/workspace
+    working_dir: /workspace
+    tty: true
+
+  js:
+    image: node:18.16.1-alpine
+    container_name: atcoder-js
+    volumes:
+      - ./js:/workspace
+    working_dir: /workspace
+    tty: true
