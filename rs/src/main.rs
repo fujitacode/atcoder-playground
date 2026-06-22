@@ -1,16 +1,15 @@
-use std::io;
+use std::io::{self, Read};
 
 fn main() {
     let mut input = String::new();
-    io::stdin().read_line(&mut input).unwrap();
-    let v: Vec<i32> = input.split_whitespace()
-                           .map(|s| s.parse().unwrap())
-                           .collect();
-    let (a, b) = (v[0], v[1]);
+    io::stdin().read_to_string(&mut input).unwrap();
+    
+    let mut iter = input.split_whitespace();
 
-    if (a * b) % 2 == 0 {
-        println!("Even");
-    } else {
-        println!("Odd");
-    }
+    let a: i32 = iter.next().unwrap().parse().unwrap();
+    let b: i32 = iter.next().unwrap().parse().unwrap();
+    let c: i32 = iter.next().unwrap().parse().unwrap();
+    let s: String = iter.next().unwrap().to_string();
+    
+    println!("{} {}", a + b + c, s);
 }
